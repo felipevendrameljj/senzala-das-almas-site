@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Senzala Das Almas - Pai Davilo de 7 Encruzilhadas</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Roboto&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('SenzalaDasAlmas.png');
+    background-size: cover;
+    background-position: center center;
+    color: #f4f1ea;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 10, 10, 0.75);
+    z-index: 0;
+  }
+  header {
+    position: relative;
+    z-index: 1;
+    background: rgba(20,20,20,0.7);
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    font-family: 'Patua One', cursive;
+    font-size: 2.8rem;
+    letter-spacing: 4px;
+    color: #f4f1ea;
+    text-shadow: 2px 2px 6px black;
+  }
+  header small {
+    display: block;
+    font-size: 1.3rem;
+    margin-top: 0.25rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #c9b99a;
+    text-shadow: 1px 1px 3px black;
+  }
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 3rem auto 3rem;
+    background: rgba(30,30,30,0.85);
+    padding: 2rem 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+  }
+  h1, h2 {
+    font-family: 'Patua One', cursive;
+    color: #f2d398;
+    margin-top: 0;
+    text-align: center;
+    text-shadow: 1px 1px 3px #824e2c;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #e2d8c1;
+    margin-bottom: 1.4rem;
+    text-align: center;
+  }
+  ul.services {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 1.8rem;
+  }
+  ul.services li {
+    background: rgba(196, 163, 104, 0.15);
+    border: 2px solid #c4a368;
+    border-radius: 12px;
+    padding: 1.5rem 1.2rem;
+    box-shadow: 0 0 8px rgba(196, 163, 104, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #f0e7d9;
+    text-align: center;
+  }
+  ul.services li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 16px rgba(255, 238, 99, 0.9);
+    border-color: #ffea63;
+    color: #fff;
+  }
+  ul.services li:focus {
+    outline: 3px solid #ffea63;
+    outline-offset: 2px;
+  }
+  section.contact-info {
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 2px solid #c4a368;
+    padding-top: 1.8rem;
+    font-size: 1.2rem;
+    color: #d9cfa6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.6rem;
+    align-items: center;
+  }
+  section.contact-info a {
+    color: #ffea63;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  section.contact-info a:hover {
+    color: #fff;
+  }
+  .whatsapp-icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    filter: drop-shadow(0 0 1px black);
+  }
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    background: rgba(20,20,20,0.75);
+    color: #a89566;
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 1.3px;
+  }
+  @media (max-width: 600px) {
+    main {
+      margin: 1.5rem 1rem 2rem;
+      padding: 1.5rem 1.8rem;
+    }
+    ul.services {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  Senzala Das Almas
+  <small>Pai Davilo de 7 Encruzilhadas</small>
+</header>
+<main role="main">
+  <h1>Seja Bem-vindo</h1>
+  <p>Este site é dedicado a levar ajuda espiritual verdadeira e poderosa para você e sua família.</p>
+  <p>Clique em qualquer serviço abaixo para iniciar uma conversa direta no WhatsApp com Pai Davilo:</p>
+
+  <ul class="services" aria-label="Lista dos serviços oferecidos">
+    <li tabindex="0" role="button" onclick="openWhatsApp('Limpeza espiritual')" onkeypress="if(event.key==='Enter')openWhatsApp('Limpeza espiritual')">1. Limpeza espiritual</li>
+    <li tabindex="0" role="button" onclick="openWhatsApp('Tarot Cigano')" onkeypress="if(event.key==='Enter')openWhatsApp('Tarot Cigano')">2.Tarot Cigano</li>
+    <li tabindex="0" role="button" onclick="openWhatsApp('Trabalhos para prosperidade')" onkeypress="if(event.key==='Enter')openWhatsApp('Trabalhos para prosperidade')">3. Trabalhos para prosperidade</li>
+    <li tabindex="0" role="button" onclick="openWhatsApp('Trabalho de amarração')" onkeypress="if(event.key==='Enter')openWhatsApp('Trabalho de amarração')">4. Trabalho de amarração</li>
+  </ul>
+
+  <section class="contact-info" aria-label="Informações de contato">
+    <p>
+      <a href="https://api.whatsapp.com/send?phone=558599820913" target="_blank" rel="noopener noreferrer" title="Chat no WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Ícone do WhatsApp" class="whatsapp-icon" />85 9982-0913
+      </a>
+    </p>
+    <p>✉️ Email: <a href="mailto:Senzaladasalmas@gmail.com">Senzaladasalmas@gmail.com</a></p>
+  </section>
+</main>
+<footer role="contentinfo">
+  © 2025 Senzala Das Almas - Pai Davilo de 7 Encruzilhadas -
+  Fortaleza Ce Avenida I José Walter N: 150
+</footer>
+<script>
+  function openWhatsApp(service) {
+    const phone = '558599820913';
+    const message = encodeURIComponent(`Olá Pai Davilo, gostaria de saber mais sobre o serviço: ${service}`);
+    const url = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
+    window.open(url, '_blank');
+  }
+</script>
+</body>
+</html>
+
